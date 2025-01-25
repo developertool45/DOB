@@ -27,10 +27,12 @@ function calculateAge(year, month, day) {
 }
 
 function displayAge(curYear, curMonth, curDay, year, month, day) {
-    let ageYears = curYear - year;
-    let ageMonths = curMonth - month;
-    let ageDays = curDay - day;
-    document.querySelector('#age').innerHTML = `${ageYears} years ${ageMonths} months ${ageDays} days`;
-    window.print();
+  let ageYears = curYear - year;
+  let ageMonths = curMonth - month;
+  let ageDays = curDay - day;
+  document.querySelector(
+    "#age"
+  ).innerHTML = `${ageYears} years ${ageMonths} months ${ageDays} days`;
+  // window.print();
 }
 
