@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <title>What is your age ?</title>
   <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
 
-  <div class="page-title">
+  <div class="main">
     <h1 class="heading">
       Calculate your age <br>
-      <span class="heading-main">Enter you DOB</span> <br> 
-      <input type="date" name="date" id="date" placeholder="dd/mm/yyyy"  min="1975-01-01" >      
+      <span class="heading-main">Enter you DOB</span> <br>
+      <!-- <input type="date" name="date" id="date" placeholder="dd/mm/yyyy" min="1975-01-01"> -->
     </h1>
-    <div class="age" id="age"></div>
+    <form method="post" class="form page-title" >
+      <div>
+        <label for="day">Day</label>
+        <input type="text" id="day" placeholder="dd" min="01" max="31" required>
+        <label for="month">Month</label>
+        <input type="text" id="month" min="01" max="12" placeholder="mm" required>
+        <label for="year">Year</label>
+        <input type="text" id="year" placeholder="year" min="1980" max="2050" required>
+      </div>
+      <button type="submit" id="submit">Calculate</button>
+    </form>
+    <br><br>
+    <div class="age" id="age"> </div>
     <div class="result">
       <h3></h3>
       <p></p>
@@ -21,4 +35,5 @@
   </div>
   <script src="./script.js"></script>
 </body>
+
 </html>
