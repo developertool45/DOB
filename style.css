@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -7,20 +8,20 @@ html, body{
   height: 100%;
   width: 100%;
   /* background: #0f0f0f; */  
-  font-family: 'Poppins', sans-serif;
+  font-family: "Geist", sans-serif;
   scroll-behavior: smooth;
 }
 body{
   display: flex;
   justify-content: center;
-  /* align-items: center; */
-  margin-top: 20px;
+  align-items: center; 
 }
-.heading{
-  text-align: center;
+.heading{  
   margin: 20px 0;
   font-size: 2rem;
   text-transform: uppercase;
+  text-align: center;
+  color: #2f2e2e;
 }
 .heading span{
   color: #1e5a9a;
@@ -28,81 +29,68 @@ body{
   font-size: 1.6rem;
   text-transform: none;
 }
-#date{
-  scroll-behavior: smooth;
-  font-size: 1.2rem;
-  color: #515152;
-  font-weight: 500;
-  font-family: 'Helvetica', sans-serif;
-  padding: 10px 15px;
-  outline: none;
+.age-form{
+  min-width: 400px;
+  width: 400px;
+  background-color: #fff;
+  padding: 30px;
   border-radius: 10px;
-  opacity: 0.8;
-  background-color: rgba(255, 255, 255, 0.171);
-  border: 1px solid #515152;
-  
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
-.age{
-  text-align: center;
-  font-size: 1.5rem;
+form label{
+  margin-bottom: 10px;
 }
-.page-title{
-  width: 500px;
-  padding: 20px 10px;
-  border-radius: 10px;
-  margin: 0 auto;
-  background-color: rgba(151, 184, 202, 0.425);
-  /* height: 350px; */
-  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
-  
-}
-.result h3{
-  font-size: 1.5rem;
-  text-align: center;
-  margin: 20px 0;
-  font-weight: 500;
-  color: #fd2e12;
-  text-transform: uppercase;
-}
-.result p{
-  font-size: 1.2rem;
-  text-align: center;
-  font-weight: 500;
-  color: #515152;
-}
-form{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-form > div{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 form input{ 
-  font-size: 1.1rem;
-  padding: 7px ;
-  margin: 0 10px;
+  font-size: 1rem;
+  padding: 7px;
+  margin: 7px 0;  
+  /* margin-bottom: 10px; */
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.171);
-  border: 1px solid #515152;
+  border: 1px solid #9c9c9c;
   outline: none;
-  width: 45px;
+  width: 100%;
   color: #515152;
 }
-form input:nth-of-type(3){
-   width: 80px;
+form input::placeholder{
+  color: #999999;
+  font-size: 1rem;  
+}
+form h4{
+  font-weight: 500;
+  margin: 5px 0;
+}
+.date-input{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+}
+.date-input input::placeholder{
+  text-transform: uppercase;
+}
+
+.selection >*{
+  display: block;
+  margin-bottom: 10px;  
+}
+.selection select{
+  font-size: 1rem;
+  padding: 7px ;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.171);
+  border: 1px solid #9c9c9c;
+  outline: none;
+  width: 100%;
+  color: #515152;
 }
 form button{  
-  width: 60%;
-  font-size: 1rem;
+  width: 50%;
+  font-size: 1.1rem;
   padding: 10px 20px;
-  margin:20px 10px;
-  border-radius: 10px;
+  margin:20px 0;
+  border-radius: 5px;
   background-color: #1e5a9a;
   border: 1px solid #1e5a9a;
   outline: none;
@@ -110,5 +98,75 @@ form button{
   cursor: pointer;
 }
 form button:hover{
-  background-color: #0f3d6b;
+  background-color: #2b6baa;
+}
+/* form and it result container */
+.form-result{
+  width: 100%;
+  display: flex;  
+  gap: 30px;
+ 
+}
+.result{
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  /* text-align: center; */
+  width: 400px; 
+  display: none;
+}
+.result h4{
+  font-weight: 500;
+  margin: 5px 0;
+  font-size: 1.3rem;
+  
+}
+.result .age{
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #1e5a9a;
+}
+.attempts{
+  margin-top: 10px;
+  font-size: 1.2rem;  
+}
+.result .content{
+  margin-top: 5px;
+  font-size: 1.08rem; 
+  padding: 10px 0; 
+}
+.result .content >*{
+  margin: 7px 0;
+}
+.content .warning{
+  color: #e83d1f;
+}
+.content #suggetion{
+  color: #066506;
+}
+.other-opts{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 15px ;  
+}
+.other-opts a{
+  text-decoration: none;
+  font-weight: 500;
+  /* background-color: #d7d5d5; */
+  background:linear-gradient(to right, #f8caa7 , #f4f2f2); 
+  border: 1px solid #9c9c9c;
+  color: #262626;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  transition: all ease 0.5s;
+}
+.other-opts a:hover{  
+  transform: scale(1.05);
+  transition: all ease 0.5s;
+}
+.show{
+  display: block;
 }
