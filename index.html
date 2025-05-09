@@ -16,35 +16,38 @@
       <!-- <input type="date" name="date" id="date" placeholder="dd/mm/yyyy" min="1975-01-01"> -->
     </h1>
     <div class="form-result">
-    <form method="post" class="age-form" id="age-form">
+    <form method="post"  class="age-form" id="age-form">
       <div class="name-number">
         <label for="name">Name</label>
-        <input type="text" id="name" placeholder=" Name" value="raj" required>
+        <input type="text" id="name" placeholder=" Name" value="tejash" required>
         <label for="number">Mobile Number</label>
-        <input type="text" id="mobileNumber" placeholder="+91-xxxxxxxxxx" value="+91-8126989696" required>
+        <input type="text" id="mobileNumber" placeholder="+91-xxxxxxxxxx" value="8126989696" required>
       </div>
-      <h4>Date of Birth: </h4>
-      <div class="date-input">        
-        <input type="text" id="day" placeholder="dd" min="01" max="31" value="2" required>        
+      <!-- <h4>Date of Birth: </h4> -->
+      <div class="date-input">   
+        <label for="date">Date of Birth:</label> <br>
+        <input type="date" name="date" id="date" placeholder="DD/MM/YYYY" min="1975-01-01" value="2006-01-02" required>
+            
+        <!-- <input type="text" id="day" placeholder="dd" min="01" max="31" value="2" required>        
         <input type="text" id="month" value="1" min="01" max="12" placeholder="mm" required>       
-        <input type="text" id="year" value="2008" placeholder="year" min="1980" max="2050" required>
+        <input type="text" id="year" value="2008" placeholder="year" min="1980" max="2050" required> -->
       </div>
       <div class="selection">
         <label for="courses">Courses</label>
         <select name="courses" id="courses" required>
-          <option value="NDA" selected>NDA</option>
-          <option value="CDSE">CDSE</option>
-          <option value="AFCAT">AFCAT</option>
-          <option value="AGNIVEER">AGNIVEER</option>
+          <option value="nda" selected>NDA</option>
+          <option value="cdse">CDSE</option>
+          <option value="afcat">AFCAT</option>
+          <option value="agniveer">AGNIVEER</option>
         </select>
       </div>
       <button type="submit" id="submit">Submit</button>
     </form>
     <br><br>
-    <div class="result">
-      <h4>Age : <span class="age" id="age"> 18 year, 1 month, 20 day</span> </h4>     
-      <div class="attempts" id="attempts">Remain attempts : <span class="attempt"></span></div>
-      <div class="content">
+    <div class="result" id="result">
+      <h4>Age : <span class="age" id="age"> </span> </h4>     
+      <div class="attempts" id="attempts"></div>
+      <!-- <div class="content">
         <p class="warning"></p>
         <p id="suggetion"></p>
         <div class="other-opts">
@@ -53,12 +56,12 @@
           <a href="#">Prepare for CDS/OTA</a>
           <a href="#">Prepare for CDS/OTA</a>        
         </div>
-      </div>
+      </div> -->
     </div>
     </div>
   </div>
 
-  <script src="./script.js"></script>
+  <script src="./index.js"></script>
 </body>
 
 </html>

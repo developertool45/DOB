@@ -60,12 +60,10 @@ form h4{
   font-weight: 500;
   margin: 5px 0;
 }
-.date-input{
+/* .date-input{
   display: flex;
-  gap: 10px;
-  align-items: center;
-
-}
+  flex-direction: column;   
+} */
 .date-input input::placeholder{
   text-transform: uppercase;
 }
@@ -139,11 +137,15 @@ form button:hover{
 .result .content >*{
   margin: 7px 0;
 }
-.content .warning{
+ .warning{
   color: #e83d1f;
 }
-.content #suggetion{
+#result p, div p{  
+  font-size: 1.05rem;
+}
+ #suggestion{
   color: #066506;
+  font-size: 1.05rem;
 }
 .other-opts{
   display: flex;
@@ -151,8 +153,9 @@ form button:hover{
   gap: 15px;
   padding-top: 15px ;  
 }
-.other-opts a{
+.other-opts a, a button{
   text-decoration: none;
+  font-size: 1.1rem;
   font-weight: 500;
   /* background-color: #d7d5d5; */
   background:linear-gradient(to right, #f8caa7 , #f4f2f2); 
@@ -162,8 +165,10 @@ form button:hover{
   border-radius: 5px;
   text-align: center;
   transition: all ease 0.5s;
+  cursor: pointer;
+  width: 100%;
 }
-.other-opts a:hover{  
+.other-opts a:hover, a button:hover{  
   transform: scale(1.05);
   transition: all ease 0.5s;
 }
