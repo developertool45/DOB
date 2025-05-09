@@ -41,28 +41,28 @@ function calculateEligibility(examType, years, months) {
     if (ageInMonths < startAge) {
       const monthsRemaining = startAge - ageInMonths;
       return `You are not eligible for the NDA exam yet. You’ll be eligible in approximately ${monthsRemaining} months.  ${generateLink(
-        "https://dehradundefenceacademy.com/nda-foundation-course-coaching-after-10-in-dehradun-sip/",
+        "https://tejashdefenceacademy.com/nda-foundation-course-11th-12th-registration",
         "Join NDA Foundation Course"
       )}`;
     } else if (ageInMonths <= endAge) {
       const attempts = Math.floor((endAge - ageInMonths) / 6);
-        return `You are eligible for NDA and have ${attempts} attempts left.
+      return `You are eligible for NDA and have ${attempts} attempts left.
         ${generateLink(
-          "https://dehradundefenceacademy.com/nda-foundation-course-coaching-after-10-in-dehradun-sip/",
+          "https://tejashdefenceacademy.com/best-nda-coaching-in-dehradun/",
           "Join NDA Foundation Course"
         )},
         ${generateLink(
           "https://dehradundefenceacademy.com/nda-foundation-course-coaching-after-10-in-dehradun-sip/",
           "Join NDA target Course"
-        )}`;        
+        )}`;
     }
-      return `<p>You are not eligible for the NDA exam as you are older than the age limit.</p> </br><p id="suggestion">${suggestionText}</p>
+    return `<p>You are not eligible for the NDA exam as you are older than the age limit.</p> </br><p id="suggestion">${suggestionText}</p>
     ${generateLink(
-      "https://dehradundefenceacademy.com/best-cds-coaching-in-dehradun-india-ota-centre/",
+      "https://tejashdefenceacademy.com/cds-coaching-in-dehradun/",
       "Prepare for CDS/OTA"
     )}
     ${generateLink(
-      "https://dehradundefenceacademy.com/best-afcat-coaching-in-dehradun/",
+      "https://tejashdefenceacademy.com/cds-coaching-in-dehradun/",
       "Prepare for AFCAT"
     )}`;
   }
@@ -74,9 +74,9 @@ function calculateEligibility(examType, years, months) {
       return `You are not eligible for CDSE. The age limit is between 19 and 25 years.`;
     } else if (ageInMonths <= endAge) {
       const attempts = calculateAttemptsLeft(endAge);
-        return `<p>You are eligible for CDSE and have ${attempts} attempts left. The exam is held in April and September.</p>
+      return `<p>You are eligible for CDSE and have ${attempts} attempts left. The exam is held in April and September.</p>
        ${generateLink(
-         "https://dehradundefenceacademy.com/best-cds-coaching-in-dehradun-india-ota-centre/",
+         "https://pages.razorpay.com/tejashdefenceacademy",
          "Prepare for CDS/OTA"
        )} 
        `;
@@ -93,9 +93,9 @@ function calculateEligibility(examType, years, months) {
 
     if (ageInMonths >= flyingStart && ageInMonths <= flyingEnd) {
       const attempts = calculateAttemptsLeft(flyingEnd);
-        response += `<p>You are eligible for AFCAT Flying Branch and have ${attempts} attempts left </p>.
+      response += `<p>You are eligible for AFCAT Flying Branch and have ${attempts} attempts left </p>.
       ${generateLink(
-        "https://dehradundefenceacademy.com/best-cds-coaching-in-dehradun-india-ota-centre/",
+        "https://pages.razorpay.com/tejashdefenceacademy",
         "Prepare for AFCAT"
       )}`;
     } else {
@@ -104,9 +104,9 @@ function calculateEligibility(examType, years, months) {
 
     if (ageInMonths >= groundStart && ageInMonths <= groundEnd) {
       const attempts = calculateAttemptsLeft(groundEnd);
-        response += `<p>You are eligible for AFCAT Ground Duty Branch and have ${attempts} attempts left.</p>
+      response += `<p>You are eligible for AFCAT Ground Duty Branch and have ${attempts} attempts left.</p>
       ${generateLink(
-        "https://dehradundefenceacademy.com/best-cds-coaching-in-dehradun-india-ota-centre/",
+        "https://pages.razorpay.com/tejashdefenceacademy",
         "Prepare for AFCAT"
       )}`;
     } else {
@@ -122,9 +122,9 @@ function calculateEligibility(examType, years, months) {
       return `<p>You are not eligible for Agniveer. The age limit is between 19 and 25 years.</p>`;
     } else if (ageInMonths <= endAge) {
       const attempts = calculateAttemptsLeft(endAge);
-        return `<p>You are eligible for Agniveer and have ${attempts} attempts left.</p>
+      return `<p>You are eligible for Agniveer and have ${attempts} attempts left.</p>
       ${generateLink(
-        "https://dehradundefenceacademy.com/best-cds-coaching-in-dehradun-india-ota-centre/",
+        "https://pages.razorpay.com/tejashdefenceacademy",
         "Prepare for Agniveer"
       )}`;
     }
