@@ -40,7 +40,8 @@ function calculateEligibility(examType, years, months) {
     const endAge = 18 * 12 + 8;
     if (ageInMonths < startAge) {
       const monthsRemaining = startAge - ageInMonths;
-      return `You are not eligible for the NDA exam yet. You’ll be eligible in approximately ${monthsRemaining} months.  ${generateLink(
+      return `You are not eligible for the NDA exam yet. You’ll be eligible in approximately ${monthsRemaining} months. 
+      ${generateLink(
         "https://tejashdefenceacademy.com/nda-foundation-course-11th-12th-registration",
         "Join NDA Foundation Course"
       )}`;
@@ -50,13 +51,14 @@ function calculateEligibility(examType, years, months) {
         ${generateLink(
           "https://tejashdefenceacademy.com/best-nda-coaching-in-dehradun/",
           "Join NDA Foundation Course"
-        )},
+        )}
         ${generateLink(
           "https://dehradundefenceacademy.com/nda-foundation-course-coaching-after-10-in-dehradun-sip/",
           "Join NDA target Course"
         )}`;
     }
-    return `<p>You are not eligible for the NDA exam as you are older than the age limit.</p> </br><p id="suggestion">${suggestionText}</p>
+    return `<p>You are not eligible for the NDA exam as you are older than the age limit.</p> 
+    <p id="suggestion">${suggestionText}</p>
     ${generateLink(
       "https://tejashdefenceacademy.com/cds-coaching-in-dehradun/",
       "Prepare for CDS/OTA"
